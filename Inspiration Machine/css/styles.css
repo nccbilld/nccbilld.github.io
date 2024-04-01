@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #808080;
+  font-family: "Quicksand", sans-serif;
+}
+
+nav {
+  background: white;
+  height: 157.58px;
+  width: 100%;
+  position: fixed;
+  top: 0; /* Ensures the nav stays at the top */
+  z-index: 998; /* Ensures it's above other content */
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+  margin-top: 39.395px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #808080;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: white;
+  transition: 0.5s;
+  background: #808080;
+}
+
+a.active {
+  background: #808080;
+  color: white;
+}
+
+@media (max-width: 952px) {
+  nav ul li a {
+    display: none;
+  }
+}
+
+.home-button {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-top: 39.395px;
+}
+
+h1 {
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  margin-left: 20px;
+  margin-top: 200px; /* Adjusted margin top to position below the nav */
+  font-size: 72px;
+}
