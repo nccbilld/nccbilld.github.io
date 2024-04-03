@@ -11,6 +11,10 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
+.about {
+  background-color: #71a0de;
+}
+
 nav {
   background: white;
   height: 157.58px;
@@ -22,7 +26,7 @@ nav {
 
 nav ul {
   float: right;
-  margin-right: 20px;
+  margin-right: 40px;
   margin-top: 39.395px;
 }
 
@@ -51,6 +55,11 @@ a.active {
   color: white;
 }
 
+a.color-active {
+  background: #71a0de;
+  color: white;
+}
+
 @media (max-width: 952px) {
   nav ul li a {
     display: none;
@@ -61,14 +70,55 @@ a.active {
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
-  margin-left: 20px;
+  margin-left: 40px;
   margin-top: 39.395px;
 }
 
 h1 {
   font-family: "Quicksand", sans-serif;
   color: white;
-  margin-left: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
   margin-top: 200px; /* Adjusted margin top to position below the nav */
   font-size: 72px;
 }
+
+h2 {
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 25px; /* Adjusted margin top to position below the nav */
+  font-size: 48px;
+}
+
+.p-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px; /* Adjusted margin top to position below the nav */
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 50px;
+}
+
+.p2-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px; /* Adjusted margin top to position below the nav */
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 50px;
+}
+
+p {
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  margin-left: 0px;
+  font-size: 40px;
+  font-size: 36px;
+}
+
