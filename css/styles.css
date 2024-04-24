@@ -225,11 +225,11 @@ input:checked + label .cardRandom {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url('https://nccbilld.github.io/assets/principle_cards.png');
+  background-image: url(https://nccbilld.github.io/assets/principle_cards.svg);
   background-size: cover;
+  background-color: white;
   animation: randomCard 1000ms steps(51, end) infinite;
   animation-play-state: paused;
-  transform: rotate(180deg);
 }
 input:checked + label .cardRandom::before {
   animation-play-state: running;
