@@ -129,13 +129,21 @@
             </div>
           <div class="right-container">
             <div class="right-inner-container">
-              <form action="contact.php" method="post">
-            <h6 class="lg-view">Contact</h6>
-            <h6 class="sm-view">Let's Chat</h6>
-                 <p>* Required</p>
-                <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
-            <button>Submit <input type="submit" value="Submit"></button>
-          </form>
+              <form method="post" action="contactengine.php">
+                <h6 class="lg-view">Contact</h6>
+                <h6 class="sm-view">Let's Chat</h6>
+                <label for="Name"></label>
+				<input type="text" name="Name" id="Name" />
+        <textarea id="Name" name="Name" rows="1" placeholder="Full Name" required></textarea>
+	
+				<label for="Email"></label>
+				<input type="text" name="Email" id="Email" />
+        <textarea id="Email" name="Email" rows="1" cols="20" placeholder="Email" required></textarea>
+				
+				<label for="Message"></label><br />
+				<textarea id="Message" name="Message" rows="4" cols="20" placeholder="Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
             </div>
           </div>
         </div>
