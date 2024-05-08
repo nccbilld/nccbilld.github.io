@@ -9,11 +9,17 @@
 body {
   background-color: #808080;
   font-family: "Quicksand", sans-serif;
+  transition: background-color 0.4s ease-in-out;
   
 }
 
+.svgPathColor {
+  fill: #808080;
+  transition: fill 0.4s ease-in-out;
+}
+
 .about {
-  background-color: #71a0de;
+  background-color: #5441f0;
 }
 .tutorial {
   background-color: #dc143c;
@@ -57,7 +63,7 @@ nav ul li a {
 
 nav ul li a:hover {
   color: white;
-  background: #808080;
+  background-color: #808080;
 }
 
 a.active {
@@ -66,7 +72,7 @@ a.active {
 }
 
 a.color-active {
-  background: #71a0de;
+  background: #5441f0;
   color: white;
 }
 
@@ -113,12 +119,13 @@ h2 {
   color: white;
   margin-left: 40px;
   margin-right: 40px;
-  margin-top: 25px; /* Adjusted margin top to position below the nav */
+  margin-bottom: 12px;
   font-size: 48px;
 }
 
 .abouth2 {
-  color: #71a0de;
+  color: #5441f0;
+  margin-top: 25px;
 }
 
 .socialh2 {
@@ -131,6 +138,12 @@ h2 {
   margin-bottom: 20px;
   
 }
+.Homeh3 {
+  color:#808080;
+  font-size: 48px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
 
 .p-container {
   display: flex;
@@ -140,6 +153,8 @@ h2 {
   padding-left: 40px;
   padding-right: 40px;
   margin-bottom: 50px;
+
+  
 }
 
 .p2-container {
@@ -156,7 +171,10 @@ p {
   font-family: "Quicksand", sans-serif;
   color: #808080;
   margin-left: 0px;
-  font-size: 34px;
+  font-size:1.6rem;
+  font-weight: 500;
+  
+  
 }
 
 p2 {
@@ -170,6 +188,8 @@ p2 {
 
 .board {
   background-color: white;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   margin-right: 5%;
   margin-left: 5%;
   text-align: center; /* Center the content horizontally */
@@ -179,8 +199,27 @@ p2 {
   overflow: hidden; /* Ensure contents do not overflow outside the board */
 }
 
+.space {
+  height: 24px;
+  width: 100%;
+}
+
+.sheets {
+  position: relative;
+  height: 60vmin;
+  width: calc(60vmin / 1.4);
+  background-color: #white;
+  background-size: 70px 120px;
+  margin: calc(40vmin / 10);
+  border-radius: calc(40vmin / 20);
+  display: inline-block;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  
+}
 
 /* Everything Below this point is the Inspiration Machine */
+
+/* Cards for Principles */
 .label-container {
   text-align: center; /* Center the content horizontally */
 }
@@ -230,6 +269,7 @@ input:checked + label .cardRandom {
   background-color: white;
   animation: randomCard 1000ms steps(51, end) infinite;
   animation-play-state: paused;
+  
 }
 input:checked + label .cardRandom::before {
   animation-play-state: running;
@@ -248,4 +288,271 @@ input {
   100% {
     background-position: 100% 0;
   }
+}
+
+/* Cards for Colors */
+.label-container2 {
+  text-align: center; /* Center the content horizontally */
+}
+
+label .cardWrapper2 {
+  position: relative;
+  height: 40vmin;
+  width: calc(40vmin / 1.4);
+  background-color: #282828;
+  background-image: 
+  background-size: 70px 120px;
+  margin: calc(40vmin / 10);
+  border-radius: calc(40vmin / 20);
+  overflow: hidden;
+  display: inline-block;
+  transition: transform 200ms linear, box-shadow 100ms linear;
+  transform: rotateY(0deg);
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+input:checked + label .cardWrapper2 {
+  transform: rotateY(180deg);
+}
+.cardRandom2 {
+  width: 0%;
+  height: 0%;
+  background-color: white;
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 1ms linear 100ms;
+}
+.cardWrapper2:hover {
+  filter: brightness(0.98);
+}
+input:focus + label .cardWrapper2 {
+  box-shadow: 0 0 calc(40vmin / 100) 0 rgba(0, 0, 0, 0);
+}
+input:checked + label .cardRandom2 {
+  opacity: 0;
+}
+.cardRandom2 {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff; /* Set background color to white */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 200ms linear, box-shadow 100ms linear;
+  transform: rotateY(0deg);
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  cursor: pointer;
+}
+
+.cardRandom2 .colorSquare {
+  width: 200px; /* Adjust size as needed */
+  height: 200px; /* Adjust size as needed */
+  border-radius: 8px; /* Adjust border radius */
+  margin-bottom: 30px; /* Spacing below the color square */
+  background-color: #808080;
+}
+
+.cardRandom2 .hexCode {
+  font-family: "Mulish", sans-serif;
+  font-size: 38px;
+  font-weight: 500;
+  color: #000;
+}
+
+input:checked + label .cardRandom2::before {
+  animation-play-state: running;
+}
+
+input {
+  height: 0;
+  width: 0;
+  border: none;
+  outline: none;
+  display: none;
+}
+@keyframes randomCard {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+/* contact form */
+
+.container {
+  border-radius: calc(40vmin / 20);
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: white; /* Set background color to white */
+  margin-bottom: 30px;
+}
+
+
+h6 {
+  font-size:2rem;
+  margin-bottom:1rem;
+  color: #5441f0;
+}
+.form-container {
+  display:flex;
+}
+
+.left-container {
+  flex:1;
+  height:480px;
+  background-color: ;
+}
+.right-container {
+  display:flex;
+  flex:1;
+  height:460px;
+  background-color: $white;
+  justify-content:center;
+  align-items:center;
+}
+
+.left-container {
+  display:flex;
+  flex:1;
+  height:480px;
+  justify-content:center;
+  align-items:center;
+    color:$white;
+}
+
+.left-container p {
+  font-size:1.6rem;
+  font-weight: 500;
+}
+
+.right-inner-container {
+  width:70%;
+  height:80%;
+  text-align:center;
+}
+
+.left-inner-container {
+  width:70%;
+  height:80%;
+  text-align:center;
+
+}
+
+input, textarea {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+  font-size:0.8rem;
+  border-radius: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+input:focus, textarea:focus{
+  outline:1px solid $teal;
+}
+
+button {
+  border-radius: 3px;
+	border: 1px solid #5441f0;
+	background-color: #5441f0;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+  font-family:"Quicksand", sans-serif;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+  cursor:pointer;
+}
+
+button:hover {
+  opacity:0.7;
+}
+@media only screen and (max-width: 600px) {
+  .left-container{
+    display: none;
+  }
+  .lg-view {
+    display:none;  
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .sm-view {
+    display:none;  
+  }
+}
+
+form p {
+  text-align:left;
+}
+
+/*social media */
+
+.social-links {
+  display: flex;
+}
+
+.social-links a {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  text-decoration: none;
+  color: #EDD837;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+  margin: 0 30px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+
+.social-links a .fab {
+  font-size: 30px;
+  line-height: 80px;
+  position: relative;
+  z-index: 10;
+  transition: color 0.5s;
+}
+
+.social-links a::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: -90px;
+  left: 0;
+  background: #000;
+  background-color: #EDD837;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.social-links a:hover::after {
+  top: 0;
+}
+
+.social-links a:hover .fab {
+  color: #fff;
+}
+
+.social-links a:hover {
+  transform: translateY(-10px);
 }
