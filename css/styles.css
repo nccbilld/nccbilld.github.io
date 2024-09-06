@@ -110,7 +110,7 @@ h1 {
   color: white;
   margin-left: 40px;
   margin-right: 40px;
-  margin-top: 200px; /* Adjusted margin top to position below the nav */
+  margin-top: 200px; 
   font-size: 90px;
 }
 
@@ -193,15 +193,15 @@ p {
 
 .board {
   background-color: white;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center;
+  align-items: center;
   margin-right: 5%;
   margin-left: 5%;
-  text-align: center; /* Center the content horizontally */
+  text-align: center;
   border-radius: 30px;
   margin-top: 4%;
   margin-bottom: 4%;
-  overflow: hidden; /* Ensure contents do not overflow outside the board */
+  overflow: hidden;
 }
 
 .space {
@@ -226,7 +226,7 @@ p {
 
 /* Cards for Colors */
 .label-container2 {
-  text-align: center; /* Center the content horizontally */
+  text-align: center;
 }
 
 label .cardWrapper2 {
